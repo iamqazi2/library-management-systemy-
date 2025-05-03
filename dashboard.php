@@ -51,7 +51,7 @@
     <span>Log Out</span>
   </div>
 </a>
-        </div>
+ </div>
         
         <!-- Main Content -->
         <div class="flex-1 flex flex-col">
