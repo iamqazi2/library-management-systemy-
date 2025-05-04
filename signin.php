@@ -50,7 +50,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["user_id"] = $user["user_id"];
                         $_SESSION["username"] = $user["username"];
                         $_SESSION["email"] = $user["email"];
-                        header("Location: user.php");
+
+                        // Redirect based on role
+                        if (strpos($email, 'admin@') === 0) {
+                            header("Location: dashboard.php"); // Admin
+                        } elseif (strpos($email, 'moderator@gmail') !== false) {
+                            header("Location: moderator.php"); // Moderator
+                        } else {
+                            header("Location: user.php"); // Regular user
+                        }
                         exit();
                     } else {
                         $errors["password"] = "Incorrect password";
@@ -69,7 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -122,6 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p class="error-text"><?php echo $errors["password"]; ?></p>
                     <?php endif; ?>
                 </div>
+                <a href="forgot-password.php">Forgot password?</a>
             </div>
             <div>
                 <button type="submit" class="font-bold bg-[#4475F2] text-white py-3 px-[120px] rounded-full">SIGN IN</button>

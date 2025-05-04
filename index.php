@@ -37,22 +37,23 @@
 </head>
 
 <body class="relative overflow-x-hidden">
-  <div class="blue-background"></div>
+        <img src="images/hero_bg.svg" alt="bg" class="absolute top-0 right-0 h-[1000px] w-[975px] " />
+
   <!-- Header -->
   <header class="flex items-center justify-between p-6 relative z-10">
     <div class="flex items-center space-x-2">
-      <img src="images/logo-2.png" alt="logo" class="w-[260px] h-[95px] ml-7"> <!-- Logo image -->
+      <img src="images/logo_blue.svg" alt="logo" class="w-[260px] h-[95px] ml-7"> <!-- Logo image -->
     </div>
     <nav class="space-x-5 ml-[-380px] text-sm font-medium text-gray-500">
       <a href="#" class="text-[#4475F2] border-b-2 border-blue-600">Feature</a>
-      <a href="#services">Service</a>
-      <a href="#review">Review</a>
+      <a href="#services" class="text-[#000]">Service</a>
+      <a href="#review" class="text-[#000]">Review</a>
     </nav>
-    <button class="bg-white text-[black] px-9 py-2 rounded-lg font-semibold">Login</button>
+    <a href="signin.php" class="bg-white  text-[black] px-9 py-2 rounded-lg font-normal">Login</a>
   </header>
   
   <!-- Main Section -->
-  <section class="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 py-10 relative z-10">
+  <section class="flex flex-col h-[70vh] lg:flex-row items-center justify-between px-8 lg:px-20 relative z-10">
     <div class="lg:w-1/2">
       <h1 class="text-[76px] font-extrabold leading-tight text-gray-900 mb-6">
         Search & review<br>
@@ -62,28 +63,28 @@
       <p class="text-gray-600 text-[16px] mb-6 max-w-md">
         Embark on a literary journey like never before with our revolutionary library application! Introducing a seamless experience that transcends traditional boundaries, where you can effortlessly search your favorite books.✨
       </p>
-      <a href="#" class="bg-[#4475F2] hover:bg-blue-600 text-white px-9 py-4 rounded-lg font-semibold transition inline-block">Start now ➜</a>
+      <a href="signin.php" class="bg-[#4475F2] hover:bg-blue-600 text-white px-9 py-4 rounded-lg font-normal transition inline-block">Start now ➜</a>
     </div>
     
     <div class="lg:w-1/2 flex justify-center relative h-96">
       <!-- Book 1 - "Dompet Ayah Sepatu Ibu" -->
       <div class="absolute left-4 bottom-4 transform hover:scale-105 transition">
-        <img src="images/img-4.svg" alt="Dompet Ayah Sepatu Ibu by Is Khairen" class="w-[209px] h-[302px] rounded-lg ">
+        <img src="images/image-4.png" alt="Dompet Ayah Sepatu Ibu by Is Khairen" class="w-64 h-atuo rounded-lg ">
       </div>
       
       <!-- Book 2 - "Talking to Strangers" -->
-      <div class="absolute top-[-50px] left-1/2 transform -translate-x-1/2 hover:scale-105 transition">
-        <img src="images/img-3.svg" alt="Talking to Strangers by Malcolm Gladwell" class="w-[193px] h-[264px] rounded-lg ">
+      <div class="absolute top-[-150px] left-1/2 transform -translate-x-1/2 hover:scale-105 transition">
+        <img src="images/image-3.png" alt="Talking to Strangers by Malcolm Gladwell" class="w-56 auto rounded-lg ">
       </div>
       
       <!-- Book 3 - Ocean/underwater scene -->
       <div class="absolute right-8 top-1/2 transform -translate-y-1/2 hover:scale-105 transition">
-        <img src="images/img-2.svg" alt="Ocean-themed book" class="w-[150px] h-[228px] rounded-lg ">
+        <img src="images/image-2.png" alt="Ocean-themed book" class="w-56 h-auto rounded-lg ">
       </div>
       
       <!-- Book 4 - "The Visual MBA" -->
-      <div class="absolute bottom-[-30px] right-1/4 hover:scale-105 transition">
-        <img src="images/img-1.svg" alt="The Visual MBA by Jason Barron" class="w-[158px] h-[193px] rounded-lg ">
+      <div class="absolute bottom-[-200px] right-1/4 hover:scale-105 transition">
+        <img src="images/image-1.png" alt="The Visual MBA by Jason Barron" class="w-48 h-auto rounded-lg ">
       </div>
     </div>
   </section>
@@ -229,8 +230,14 @@
 
     <!-- Footer -->
    <footer class="bg-[#4475F2] text-white pt-16 pb-8 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-bl-full"></div>
-    <div class="absolute bottom-0 left-0 w-32 h-32 bg-white opacity-20 rounded-tr-full"></div>
+    <div class="absolute top-0 right-0  ">
+        <img src="images/top.png" alt="BookWorm Icon" class="h-[447px]">
+
+    </div>
+    <div class="absolute bottom-0 left-0 w-[300px] h-[300px] ">
+                <img src="images/bottom.png" alt="BookWorm Icon" class="h-[447px]">
+
+    </div>
     <div class="container mx-auto px-8">
         <!-- Logo -->
         <div class="flex justify-center mb-12">

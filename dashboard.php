@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Redirect to login if user is not logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: signin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +55,7 @@
                     </a>
                 </div>
             </div>
- <a href="#" class="flex items-center px-4 py-2 hover:bg-blue-600">
+ <a href="logout.php" class="flex items-center px-4 py-2 hover:bg-blue-600">
   <div class="flex items-center p-4">
     <img src="images/logout.svg" class="h-5 w-5 mr-3" alt="Logout">
     <span>Log Out</span>
@@ -258,6 +268,7 @@
     </div>
 
     <script>
+        
         // Initialize chart
         document.addEventListener('DOMContentLoaded', function() {
             const ctx = document.getElementById('bookChart').getContext('2d');
